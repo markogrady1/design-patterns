@@ -1,6 +1,6 @@
 package strategyPattern;
 
-public class Character {
+abstract class Character {
 	Weapon weapon;
 
 	public void setWeapon(Weapon weapon) {
