@@ -1,5 +1,15 @@
 package observerPattern;
 import java.util.ArrayList;
+/*
+|==============================================================
+|
+|--------------------------------------------------------------
+|	The EventsOffice is the 'concrete-subject' in this pattern
+|--------------------------------------------------------------
+|
+|==============================================================
+|
+*/
 public class EventsOffice implements Administrator {
 	String city,venue;
 	int price;
