@@ -1,7 +1,16 @@
 <?php 
 include_once('User.php');
 include_once('Administrator.php');
-
+/*
+|=====================================================================
+|
+|----------------------------------------------------------------------
+|	The ApplicationUser is the 'concrete-observer' in this pattern
+|----------------------------------------------------------------------
+|
+|======================================================================
+|
+*/
 class ApplicationUser implements User{
 	private $city;
 	private $price;
