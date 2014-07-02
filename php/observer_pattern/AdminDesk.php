@@ -14,9 +14,11 @@ class AdminDesk implements Administrator{
 		$this->observer[] = $user;
 		
 	}
+
 	public function removeUser(User $user){
 		unset($this->observer[$user]);	
 	}
+	
 	public function notifyUser(){
 
 		foreach($this->observer as $observer){
@@ -34,7 +36,7 @@ class AdminDesk implements Administrator{
 		$this->venue = $conferenceVenue;
 		$this->sendConferenceDetails();
 	}
-	
+
 	public function displayDetails(){
 		echo "New conference details:<br>City Location: ".$this->city."<br>Conference price: ".$this->price."<br>Conference venue: ".$this->venue;
 	}

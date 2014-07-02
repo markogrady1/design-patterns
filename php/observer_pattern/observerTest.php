@@ -4,6 +4,7 @@ include_once 'MagazineUser.php';
 include_once 'ApplicationUser.php';
 
 $adminDesk = new AdminDesk();
+
 $magUser = new MagazineUser();
 $magUser->userReg($adminDesk);
 $appUser = new ApplicationUser();
