@@ -1,7 +1,16 @@
 <?php 
 include_once('User.php');
 include_once('Administrator.php');
-
+/*
+|=====================================================================
+|
+|----------------------------------------------------------------------
+|	The MagazineUser is the 'concrete-observer' in this pattern
+|----------------------------------------------------------------------
+|
+|======================================================================
+|
+*/
 class MagazineUser implements User{
 	private $city;
 	private $price;
