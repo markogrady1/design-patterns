@@ -62,7 +62,7 @@ class Gun implements Weapon{
 	}
 }
 
-class BAzooka implements Weapon{
+class Bazooka implements Weapon{
 	
 	public function action(){
 		echo 'Bazoooom!!!<br>';
