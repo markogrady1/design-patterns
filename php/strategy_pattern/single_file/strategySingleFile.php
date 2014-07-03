@@ -75,7 +75,13 @@ class NoWeapon implements Weapon{
 		echo 'Oh-No I have no Weapon<br>';
 	}
 }
-
+/*
+|
+|----------------------------------
+|	implementation
+|----------------------------------
+|
+*/
 $king = new King;
 $king->shout();
 $king->setWeapon(new Axe);
