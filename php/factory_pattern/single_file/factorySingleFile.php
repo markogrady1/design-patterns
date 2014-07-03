@@ -112,7 +112,13 @@ class CookieStore{
 	}
 }
 
-
+/*
+|
+|----------------------------------
+|	implementation
+|----------------------------------
+|
+*/
 $cf = new CookieFactory();
 $cookie = new Cookie();
 $cs = new CookieStore($cf);
