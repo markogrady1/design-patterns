@@ -105,7 +105,13 @@ class MagazineUser implements User{
 	}
 	
 }
-
+/*
+|
+|----------------------------------
+|	implementation
+|----------------------------------
+|
+*/
 $adminDesk = new AdminDesk();
 
 $magUser = new MagazineUser();
