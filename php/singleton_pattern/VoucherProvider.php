@@ -1,5 +1,11 @@
 <?php 
-
+/*
+|==================================================
+|--------------------------------------------------
+|	Check  whether instance exists already
+|--------------------------------------------------
+|==================================================
+*/
 class VoucherProvider{
 	private static $instance = null;
 	public static function getVoucher(){
