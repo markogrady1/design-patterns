@@ -25,7 +25,11 @@ class AdminDesk implements Administrator{
 	}
 
 	public function removeUser(User $user){
-		unset($this->observer[$user]);	
+		foreach ($this->observer as $obs => $val) {
+			if($val === $user){
+				unset($this->observer[$obs]);	
+			}
+		}	
 	}
 	
 	public function notifyUser(){

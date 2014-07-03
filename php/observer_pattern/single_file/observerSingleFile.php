@@ -29,7 +29,11 @@ class AdminDesk implements Administrator{
 	}
 
 	public function removeUser(User $user){
-		unset($this->observer[$user]);	
+		foreach ($this->observer as $obs => $val) {
+			if($val === $user){
+				unset($this->observer[$obs]);	
+			}
+		}	
 	}
 	
 	public function notifyUser(){
@@ -122,3 +126,4 @@ $appUser->userReg($adminDesk);
 $adminDesk->setConferenceDetails('London',1000,'Prince Albert Hall');
 $adminDesk->setConferenceDetails('New York',20000,'New Jersey Hall');
 $adminDesk->displayDetails();
+$adminDesk->removeUser($magUser);
