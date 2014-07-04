@@ -8,11 +8,16 @@
 */
 class VoucherProvider{
 	private static $instance = null;
+
+	private function __construct(){
+
+	}
+
 	public static function getVoucher(){
 		if(self::$instance == null){
 			self::$instance = new VoucherProvider();
 			self::$instance->setDateStamp();
-			return 'instance created';
+			echo 'instance created';
 		}
 		return self::$instance;
 	}
