@@ -13,6 +13,8 @@ class VoucherCheck{
 |================================================
 |------------------------------------------------
 |	Class ensures only one instance is created
+|	The private constructor means only the
+|	getVoucher method can create an instance
 |------------------------------------------------
 |================================================
 */
