@@ -22,9 +22,7 @@ class VoucherProvider{
 			self::$instance->setDateStamp();
 			echo 'instance created<br>';
 		}
-		echo 'already created<br>';
 		return self::$instance;
-
 	}
 
 	public function setDateStamp(){
