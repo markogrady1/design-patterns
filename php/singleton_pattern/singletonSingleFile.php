@@ -9,16 +9,10 @@ class VoucherCheck{
 	}
 
 }
-/*
-|================================================
-|------------------------------------------------
-|	Class ensures only one instance is created
-|------------------------------------------------
-|================================================
-*/
+
 class VoucherProvider{
 	private static $instance = null;
-
+	
 	private function __construct(){
 		
 	}
@@ -26,7 +20,7 @@ class VoucherProvider{
 		if(self::$instance == null){
 			self::$instance = new VoucherProvider();
 			self::$instance->setDateStamp();
-			echo 'instance created<br>';
+			return 'instance created';
 		}
 		return self::$instance;
 	}
@@ -35,4 +29,3 @@ class VoucherProvider{
 		// start date stamp
 	}
 }
-
