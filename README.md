@@ -2,5 +2,20 @@ Design-patterns
 ===============
 Personal library of design patterns / PHP and Java.
 -
-More patterns added in due course.
+Java
+-
+- factory
+- observer
+- strategy
+
+PHP
+-
+- factory
+- observer
+- strategy
+- decorator
+- singleton
+
+code still in production
+
 
