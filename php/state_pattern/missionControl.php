@@ -9,7 +9,6 @@ class MissionControl{
 	public $liftOff ;
 
 	public function __construct($tMinus){
-		
 	$this->systemsGo = new SystemsGo($this);
 	$this->mainEngine = new MainEngine($this);
 	$this->fireRockets = new FireRockets($this);
@@ -23,7 +22,6 @@ class MissionControl{
 			echo 'Incorrect procedure. Mission abort.<br>';
 			$this->state = new MissionAbort($this);
 			$this->state->shutDown();
-
 		}
 	}
 
