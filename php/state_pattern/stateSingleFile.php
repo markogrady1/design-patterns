@@ -51,7 +51,8 @@ public function __construct(MissionControl $missionControl){
 		echo "Power units have not been started.<br>";
 	}
 	public function shutDown(){
-		echo "Permission has not been given.<br>";
+		echo "All systems are to cease operations immediatly.<br>";
+		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 	public function rocketBooster(){
 		echo "power units have not been started.<br>";
@@ -76,7 +77,8 @@ public function __construct(MissionControl $missionControl){
 		$this->missionControl->setState($this->missionControl->getRocketBooster());
 	}
 	public function shutDown(){
-		echo "Permission has not been given.<br>";
+		echo "All systems are to cease operations immediatly.<br>";
+		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 	public function rocketBooster(){
 		echo "power units have not been started.<br>";
@@ -102,7 +104,8 @@ public function __construct(MissionControl $missionControl){
 		
 	}
 	public function shutDown(){
-		echo "Permission has not been given.<br>";
+		echo "All systems are to cease operations immediatly.<br>";
+		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 	public function rocketBooster(){
 		echo "We have lift off.<br>";
@@ -189,6 +192,9 @@ class MissionControl{
 
 	public function rocketBooster(){
 		$this->state->rocketBooster();
+	}
+	public function shutDown(){
+		$this->state->shutDown();
 	}
 
 	public function getStartPowerUnits(){
