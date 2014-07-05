@@ -18,7 +18,8 @@ class SystemsGo implements State{
 		echo "systems are not ready yet";
 	}
 	public function shutDown(){
-		echo "Order not given";
+		echo "All systems are to cease operations immediatly.<br>";
+		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 	public function rocketBooster(){
 		echo "systems are not ready yet";

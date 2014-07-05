@@ -48,6 +48,9 @@ class MissionControl{
 	public function rocketBooster(){
 		$this->state->rocketBooster();
 	}
+public function shutDown(){
+		$this->state->shutDown();
+	}
 
 	public function getStartPowerUnits(){
 		return $this->mainEngine;

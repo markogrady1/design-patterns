@@ -17,7 +17,8 @@ public function __construct(MissionControl $missionControl){
 		$this->missionControl->setState($this->missionControl->getRocketBooster());
 	}
 	public function shutDown(){
-		echo "Permission has not been given.<br>";
+		echo "All systems are to cease operations immediatly.<br>";
+		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 	public function rocketBooster(){
 		echo "power units have not been started.<br>";
