@@ -20,7 +20,6 @@ class VoucherProvider{
 		if(self::$instance == null){
 			self::$instance = new VoucherProvider();
 			self::$instance->setDateStamp();
-			return 'instance created';
 		}
 		return self::$instance;
 	}
