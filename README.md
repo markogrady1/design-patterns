@@ -16,6 +16,6 @@ PHP
 - decorator
 - singleton
 
-code still in production
+code still in production.
 
 
