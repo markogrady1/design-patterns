@@ -11,7 +11,7 @@ package facadePattern;
 public class Flight {
 	private String id;
 	private String flightNo = "AM676798";
-	private String airLine = "JavaAir";
+	private String airLine = "Java-Air";
 	private String departureTime = "12-11-14  10:43";
 
 	public Flight(String id) {
