@@ -5,6 +5,7 @@ Personal library of design patterns / PHP and Java.
 Java
 -
 - factory
+- facade
 - observer
 - strategy
 
