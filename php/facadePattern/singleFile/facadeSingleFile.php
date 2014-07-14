@@ -174,6 +174,6 @@ class Baggage{
 
 }
 
-$data = new DataFacade();
-$stats = new Statistics($data);
+
+$stats = new Statistics(new DataFacade());
 $stats->retrieveData('319YX');
