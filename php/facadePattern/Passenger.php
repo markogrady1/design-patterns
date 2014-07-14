@@ -1,9 +1,16 @@
-<?php namespace php\facadePattern;
-
+<?php 
+/*
+|==========================================================================
+|--------------------------------------------------------------------------
+|	The values for the properties would usually be obtained from a database
+|--------------------------------------------------------------------------
+|==========================================================================
+*/
 class Passenger{
-	private $passengerName; 
-	private $passengerAddress;
-	private $passengerAge;
+
+	private $passengerName = 'Bob Brown'; 
+	private $passengerAddress = 'London';
+	private $passengerAge = '41';
 	private $id;
 
 	public function __construct($passID){
@@ -11,14 +18,14 @@ class Passenger{
 	}
 
 	public function getPassengerName(){
-		return 'Bob Brown';
+		return $this->passengerName;
 	}
 
 	public function getPassengerAddress(){
-		return 'London';
+		return $this->passengerAddress;
 	}
 
 	public function getPassengerAge(){
-		return '41';
+		return $this->passengerAge;
 	}
 }

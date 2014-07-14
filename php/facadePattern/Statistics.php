@@ -1,6 +1,6 @@
-<?php namespace php\facadePattern;
+<?php 
 
-include 'ClientData.php';
+
 
 class Statistics{
 

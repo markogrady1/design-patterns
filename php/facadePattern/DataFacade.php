@@ -1,14 +1,13 @@
-<?php namespace php\facadePattern;
+<?php 
+
  
- include 'Passenger.php';
- include 'Flight.php';
- include 'Baggage.php';
+ 
 class DataFacade {
 
 private $passengerNo;
 
 	public function retrieveStats($passID){
-	$this->passengerNo = 'Passenger:'.$passID;
+	$this->passengerNo = 'Passenger: '.$passID;
 		return array(
 			'passenger'	=> $this->getPassengerDetails($passID),
 			'flight'	=> $this->getFlightDetails($passID),

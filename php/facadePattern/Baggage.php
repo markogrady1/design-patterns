@@ -1,9 +1,15 @@
-<?php namespace php\facadePattern;
- 
+<?php 
+ /*
+|========================================================================
+|------------------------------------------------------------------------
+| The values for the properties would usually be obtained from a database
+|------------------------------------------------------------------------
+|========================================================================
+*/
 class Baggage{
-  private $totalWeight;
-  private $amount;
-  private $allAccountedFor;
+  private $totalWeight = '5KG';
+  private $amount = '3';
+  private $allAccountedFor = 'true';
   private $id;
 
   	public function __construct($passID){
@@ -11,15 +17,15 @@ class Baggage{
   	}  
 
   	public function getTotalWeight(){
-  		return '5KG';
+  		return $this->totalWeight;
   	}
 
 	public function getAmount(){
-  		return '3';
+  		return $this->amount;
   	}
 
 	public function getAllAccountedFor(){
-  		return 'true';
+  		return $this->allAccountedFor;
   	}
 
 }

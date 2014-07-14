@@ -1,9 +1,15 @@
-<?php namespace php\facadePattern;
-
+<?php 
+/*
+|========================================================================
+|------------------------------------------------------------------------
+| The values for the properties would usually be obtained from a database
+|------------------------------------------------------------------------
+|========================================================================
+*/
 class Flight{ 
-  private $flightNo;
-  private $airLine;
-  private $depatureTime;
+  private $flightNo = 'A1W78783';
+  private $airLine = 'PHPAir';
+  private $depatureTime = '11-10-14 | 04:43';
   private $id;
 
 	public function __construct($passID){
@@ -11,14 +17,14 @@ class Flight{
 	}
 
 	public function getFlightNo(){
-		return 'A1W78783';
+		return $this->flightNo;
 	}
 
 	public function getAirLine(){
-		return 'PHPAir';
+		return $this->airLine;
 	}
 
 	public function getDepatureTime(){
-		return '11-10-14 | 04:43';
+		return $this->depatureTime;
 	}
 }

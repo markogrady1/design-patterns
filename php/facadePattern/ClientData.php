@@ -1,4 +1,4 @@
-<?php  namespace php\facadePattern;
+<?php  
 
 class ClientData{
 	private $passenger;
