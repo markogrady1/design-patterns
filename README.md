@@ -4,19 +4,20 @@ Personal library of design patterns / PHP and Java.
 -
 Java
 -
-- factory
-- facade
-- observer
-- strategy
+- Factory
+- Facade
+- Observer
+- Strategy
 
 PHP
 -
-- factory
-- facade
-- observer
-- strategy
-- decorator
-- singleton
+- Factory
+- Facade
+- Observer
+- Strategy
+- Decorator
+- Singleton
+- State
 
 code still in production.
 
