@@ -1,6 +1,6 @@
 Design-patterns
 ===============
-Personal library of design patterns / PHP and Java.
+Personal library of design patterns for PHP and Java.
 -
 Java
 -
