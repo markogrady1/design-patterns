@@ -12,6 +12,7 @@ Java
 PHP
 -
 - factory
+- facade
 - observer
 - strategy
 - decorator
