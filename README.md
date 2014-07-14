@@ -11,14 +11,14 @@ Java
 
 PHP
 -
+- Decorator
 - Factory
 - Facade
 - Observer
 - Strategy
-- Decorator
 - Singleton
 - State
 
-code still in production.
+more patterns in production.
 
 
