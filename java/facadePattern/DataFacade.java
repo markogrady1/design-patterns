@@ -1,5 +1,5 @@
 package facadePattern;
-
+ 
 public class DataFacade {
 	private String[] data = new String[3];
 

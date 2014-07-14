@@ -13,7 +13,7 @@ private $passengerNo;
 			'flight'	=> $this->getFlightDetails($passID),
 			'baggage'	=> $this->getBaggageDetails($passID)
 			);
-	}
+	} 
 
 	public function getPassengerDetails($passID){
 		$passenger = new Passenger($passID);
