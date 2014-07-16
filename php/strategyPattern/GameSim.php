@@ -1,5 +1,11 @@
 <?php 
-require 'autoload.php';
+use php\strategyPattern\King;
+use php\strategyPattern\Axe;
+use php\strategyPattern\NoWeapon;
+use php\strategyPattern\Gun;
+use php\strategyPattern\Prince;
+use php\strategyPattern\Sword;
+include_once('../../autoload.php');
 
 $king = new King;
 $king->shout();

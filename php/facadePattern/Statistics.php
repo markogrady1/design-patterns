@@ -1,6 +1,4 @@
-<?php 
-
-
+<?php namespace php\facadePattern;
 
 class Statistics{
 

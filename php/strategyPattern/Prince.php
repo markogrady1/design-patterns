@@ -1,5 +1,4 @@
-<?php 
-
+<?php  namespace php\strategyPattern;
 
 class Prince extends Character{
 

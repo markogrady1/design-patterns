@@ -1,4 +1,4 @@
-<?php 
+<?php  namespace php\statePattern;
 
 interface State {
 	public function checkAllSystems();

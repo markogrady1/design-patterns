@@ -1,7 +1,5 @@
-<?php 
+<?php namespace php\facadePattern;
 
- 
- 
 class DataFacade {
 
 private $passengerNo;

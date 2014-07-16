@@ -1,4 +1,4 @@
-<?php 
+<?php namespace php\strategyPattern;
 class Axe implements Weapon{
 
 	public function action(){

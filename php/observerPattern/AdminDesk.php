@@ -1,4 +1,4 @@
-<?php 
+<?php namespace php\observerPattern;
 /*
 |==============================================================
 |
@@ -9,9 +9,6 @@
 |==============================================================
 |
 */
-include_once('Administrator.php');
-include_once('User.php');
-
 class AdminDesk implements Administrator{
 	private $user;
 	private $city;

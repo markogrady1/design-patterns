@@ -1,14 +1,13 @@
-<?php 
-include_once 'Laptop.php';
-include_once 'Keyboard.php';
-include_once 'Mouse.php';
+<?php use php\decoratorPattern;
 
-$laptop = new Laptop;
+include('../../autoload.php');
+
+$laptop = new decoratorPattern\Laptop;
 $money = $laptop->cost();
 //echo $laptop->getDescription().'  '.$laptop->cost();
-$keyboard = new Keyboard($laptop);
+$keyboard = new decoratorPattern\Keyboard($laptop);
 echo $keyboard->getDescription();
 echo $laptop->cost();
-$mouse = new Mouse($laptop);
+$mouse = new decoratorPattern\Mouse($laptop);
 echo $mouse->getDescription();
 echo $mouse->cost();

@@ -1,6 +1,6 @@
-<?php 
+<?php use php\facadePattern;
 
-include('autoload.php');
+ include('../../autoload.php');
 
-$stats = new Statistics(new DataFacade());
+$stats = new facadePattern\Statistics(new facadePattern\DataFacade());
 $stats->retrieveData('319YX');

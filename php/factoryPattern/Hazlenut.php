@@ -1,4 +1,4 @@
-<?php 
+<?php  namespace php\factoryPattern;
 
 class Hazlenut extends Cookie{
 	

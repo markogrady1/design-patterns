@@ -1,4 +1,4 @@
-<?php 
+<?php  namespace php\strategyPattern;
 
 class Gun implements Weapon{
 	

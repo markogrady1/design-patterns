@@ -1,4 +1,4 @@
-<?php 
+<?php  namespace php\statePattern;
 
 class MissionControl{
 	public $state;
@@ -48,13 +48,14 @@ class MissionControl{
 	public function rocketBooster(){
 		$this->state->rocketBooster();
 	}
-public function shutDown(){
+	public function shutDown(){
 		$this->state->shutDown();
 	}
 
 	public function getStartPowerUnits(){
 		return $this->mainEngine;
 	}
+	
 	public function getRetractArms(){
 		return $this->fireRockets;
 	}
@@ -62,9 +63,11 @@ public function shutDown(){
 	public function getRocketBooster(){
 		return $this->liftOff;
 	}
+	
 	public function getAbortProcedure(){
 		return "All systems are shutting down and fuel is being drained.<br>";
 	}
+	
 	public function getLiftOffStatus(){
 		return "We have a successful lift-Off.<br>";
 	}

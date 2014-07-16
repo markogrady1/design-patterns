@@ -1,6 +1,4 @@
-<?php 
-include_once('User.php');
-include_once('Administrator.php');
+<?php  namespace php\observerPattern;
 /*
 |=====================================================================
 |

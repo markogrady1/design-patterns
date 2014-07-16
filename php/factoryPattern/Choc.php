@@ -1,4 +1,4 @@
-<?php 
+<?php  namespace php\factoryPattern;
 class Choc extends Cookie{
 	
 	public function __construct(){

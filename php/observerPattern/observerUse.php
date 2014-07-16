@@ -1,7 +1,9 @@
 <?php 
-include_once 'AdminDesk.php';
-include_once 'MagazineUser.php';
-include_once 'ApplicationUser.php';
+use php\observerPattern\AdminDesk;
+use php\observerPattern\MagazineUser;
+use php\observerPattern\ApplicationUser;
+
+include_once('../../autoload.php');
 
 $adminDesk = new AdminDesk();
 

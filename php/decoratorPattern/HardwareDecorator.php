@@ -1,5 +1,5 @@
-<?php 
-include_once 'Hardware.php';
+<?php  namespace php\decoratorPattern;
+
 abstract class HardwareDecorator extends Hardware{
 	
 	public function getDescription(){
