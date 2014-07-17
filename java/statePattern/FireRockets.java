@@ -2,7 +2,7 @@ package statePattern;
 
 public class FireRockets implements State {
 	private MissionControl missionControl;
-
+	
 	public FireRockets(MissionControl missionControl) {
 		this.missionControl = missionControl;
 	}

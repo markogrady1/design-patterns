@@ -26,7 +26,7 @@ public class MissionAbort implements State {
 	@Override
 	public void shutDown() {
 		System.out.println("All systems are to cease operations immediatly");
-		this.missionControl.setState(this.missionControl.getAbortProcedure());
+		System.exit(1);
 	}
 
 	@Override
