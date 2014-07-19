@@ -20,5 +20,3 @@ PHP
 - State
 
 more patterns in production.
-
-
