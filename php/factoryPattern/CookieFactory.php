@@ -11,7 +11,7 @@
 */
 class CookieFactory{
 
-	public $cookie;
+	private $cookie;
 
 	public function createCookie($type){
 		$this->cookie = new Cookie;
