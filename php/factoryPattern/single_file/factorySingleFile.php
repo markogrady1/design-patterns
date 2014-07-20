@@ -65,7 +65,7 @@ class Hazlenut extends Cookie{
 */
 class CookieFactory{
 
-	public $cookie;
+	private $cookie;
 
 	public function createCookie($type){
 		$this->cookie = new Cookie;
@@ -97,7 +97,7 @@ class CookieFactory{
 */
 class CookieStore{
 	private $factory = null;
-	public $cookie = null;
+	private $cookie = null;
 	public function __construct(CookieFactory $factory){
 		$this->factory=$factory;
 	}
