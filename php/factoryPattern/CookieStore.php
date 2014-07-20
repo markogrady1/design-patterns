@@ -11,7 +11,7 @@
 */
 class CookieStore{
 	private $factory = null;
-	public $cookie = null;
+	private $cookie = null;
 	public function __construct(CookieFactory $factory){
 		$this->factory=$factory;
 	}
