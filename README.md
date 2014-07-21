@@ -8,6 +8,7 @@ Java
 - Factory
 - Observer
 - Proxy
+- Singleton
 - State
 - Strategy
 
