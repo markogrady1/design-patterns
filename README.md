@@ -4,19 +4,22 @@ Personal library of design patterns for PHP and Java.
 -
 Java
 -
-- Factory
 - Facade
+- Factory
 - Observer
+- Proxy
+- State
 - Strategy
 
 PHP
 -
 - Decorator
-- Factory
 - Facade
+- Factory
 - Observer
-- Strategy
+- Proxy
 - Singleton
 - State
+- Strategy
 
 more patterns in production.
