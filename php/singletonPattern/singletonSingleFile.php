@@ -4,7 +4,7 @@ class VoucherCheck{
 
 	public function __construct($id){
 		if($id == 'AZH9JD')
-			signIn();
+			$this->signIn();
 	}
 
 	public function signIn(){
@@ -22,6 +22,7 @@ class VoucherProvider{
 	public static function getVoucher(){
 		if(self::$instance == null){
 			self::$instance = new VoucherProvider();
+			echo 'Voucher sent';
 			self::$instance->setDateStamp();
 		}
 		return self::$instance;
@@ -31,3 +32,4 @@ class VoucherProvider{
 		// start date stamp
 	}
 }
+$voucher = new VoucherCheck('AZH9JD');
