@@ -7,6 +7,7 @@ Java
 - Facade
 - Factory
 - Observer
+- Proxy
 - State
 - Strategy
 
