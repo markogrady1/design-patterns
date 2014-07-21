@@ -4,8 +4,8 @@ Personal library of design patterns for PHP and Java.
 -
 Java
 -
-- Factory
 - Facade
+- Factory
 - Observer
 - Strategy
 
