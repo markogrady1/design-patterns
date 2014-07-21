@@ -12,11 +12,12 @@ Java
 PHP
 -
 - Decorator
-- Factory
 - Facade
+- Factory
 - Observer
-- Strategy
+- Proxy
 - Singleton
 - State
+- Strategy
 
 more patterns in production.
