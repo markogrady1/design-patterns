@@ -19,7 +19,7 @@ public class Statistics {
  /*
 |========================================================================
 |------------------------------------------------------------------------
-| The values for the instance variables would 
+|  The values for the instance variables would 
 |  usually be obtained from a database
 |  However values have been added for the benfit of this example
 |------------------------------------------------------------------------
