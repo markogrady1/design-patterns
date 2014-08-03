@@ -8,11 +8,13 @@ class Keyboard extends HardwareDecorator{
 	}
 
 	public function getDescription(){
-	$this->description .= $this->hardware->getDescription().' + keyboard';
-			return $this->description;
+		$this->description .= $this->hardware->getDescription().' + keyboard';
+	
+		return $this->description;
 	}
 
 	public function cost(){
+		
 		return $this->hardware->cost()+60;
 	}
 
