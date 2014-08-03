@@ -7,6 +7,7 @@ class Laptop extends Hardware{
 	}
 	
 	public function cost(){
+		
 		return 200;
 	}
 }
