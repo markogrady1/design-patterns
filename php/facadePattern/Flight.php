@@ -18,14 +18,17 @@ class Flight{
 	}
 
 	public function getFlightNo(){
+		
 		return $this->flightNo;
 	}
 
 	public function getAirLine(){
+		
 		return $this->airLine;
 	}
 
 	public function getDepatureTime(){
+		
 		return $this->depatureTime;
 	}
 }
