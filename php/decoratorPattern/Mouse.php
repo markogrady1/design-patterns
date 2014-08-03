@@ -8,12 +8,14 @@ class Mouse extends HardwareDecorator{
 	}
 
 	public function getDescription(){
-	$this->description .= $this->hardware->getDescription().' + Mouse';
-			return $this->description;
+		$this->description .= $this->hardware->getDescription() . ' + Mouse';
+		
+		return $this->description;
 	}
 
 	public function cost(){
-		return $this->hardware->cost()+40;
+		
+		return $this->hardware->cost() + 40;
 	}
 
 }
