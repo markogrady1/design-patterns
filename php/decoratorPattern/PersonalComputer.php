@@ -7,6 +7,7 @@ class PersonalComputer extends Hardware {
 	}
 	
 	public function cost(){
+		
 		return 500;
 	}
 }
