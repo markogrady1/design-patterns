@@ -18,14 +18,17 @@ class Baggage{
   	}  
 
   	public function getTotalWeight(){
+  		
   		return $this->totalWeight;
   	}
 
 	public function getAmount(){
+		
   		return $this->amount;
   	}
 
 	public function getAllAccountedFor(){
+		
   		return $this->allAccountedFor;
   	}
 
