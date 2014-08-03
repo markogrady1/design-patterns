@@ -17,5 +17,4 @@ class Keyboard extends HardwareDecorator{
 		
 		return $this->hardware->cost()+60;
 	}
-
 }
