@@ -19,14 +19,17 @@ class Passenger{
 	}
 
 	public function getPassengerName(){
+		
 		return $this->passengerName;
 	}
 
 	public function getPassengerAddress(){
+		
 		return $this->passengerAddress;
 	}
 
 	public function getPassengerAge(){
+		
 		return $this->passengerAge;
 	}
 }
