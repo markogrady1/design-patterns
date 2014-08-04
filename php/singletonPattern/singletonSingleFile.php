@@ -2,29 +2,32 @@
 
 class VoucherCheck{
 
-	public function __construct($id){
+	public function __construct($id) {
 		if($id == 'AZH9JD')
 			$this->signIn();
 	}
 
-	public function signIn(){
+	public function signIn() {
+		
 		$newVoucher = VoucherProvider::getVoucher();
 	}
 
 }
 
-class VoucherProvider{
+class VoucherProvider {
+	
 	private static $instance = null;
 	
-	private function __construct(){
+	private function __construct() {
 		
 	}
-	public static function getVoucher(){
-		if(self::$instance == null){
-			self::$instance = new VoucherProvider();
-			echo 'Voucher sent';
-			self::$instance->setDateStamp();
+	public static function getVoucher() {
+		if(self::$instance == null) {
+		   self::$instance = new VoucherProvider();
+		   echo 'Voucher sent';
+		   self::$instance->setDateStamp();
 		}
+		
 		return self::$instance;
 	}
 
