@@ -24,7 +24,7 @@ class CookieFactory{
 		} 
 
 		if($type == 'hazlenut'){
-			$this->cookie =new Hazlenut;
+			$this->cookie = new Hazlenut;
 		}
 		
 		return $this->cookie;
