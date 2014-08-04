@@ -1,26 +1,27 @@
 <?php  namespace php\statePattern;
 
 class LiftOff implements State{
-public $missionControl;
-
-public function __construct(MissionControl $missionControl){
+	
+	public $missionControl;
+	
+	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
 
-	public function checkAllSystems(){
+	public function checkAllSystems() {
 		echo "Systems have already been cleared.<br>";
 	}
 
-	public function startPowerUnits(){
+	public function startPowerUnits() {
 		echo "Power units have been started.<br>";
 	}
 
-	public function retractArms(){
+	public function retractArms() {
 		echo "Arms and fuel connections have been retracted.<br>";
 		
 	}
 
-	public function shutDown(){
+	public function shutDown() {
 		echo "All systems are to cease operations immediatly.<br>";
 		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
