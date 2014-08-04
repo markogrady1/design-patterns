@@ -1,5 +1,5 @@
 <?php namespace php\proxyPattern;
 
-interface Logo{
+interface Logo {
 	public function displayLogo();
 }
