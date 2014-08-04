@@ -1,30 +1,31 @@
 <?php  namespace php\statePattern;
 
-class MissionAbort implements State{
-public $missionControl;
-
-public function __construct(MissionControl $missionControl){
+class MissionAbort implements State {
+	
+	public $missionControl;
+	
+	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
 
-	public function checkAllSystems(){
+	public function checkAllSystems() {
 		echo "Countdown aborted.<br>";
 	}
 
-	public function startPowerUnits(){
+	public function startPowerUnits() {
 		echo "Power units have been shut down.<br>";
 	}
 
-	public function retractArms(){
+	public function retractArms() {
 		echo "Fuel drainage in at safe level.<br>";
 	}
 
-	public function shutDown(){
+	public function shutDown() {
 		echo "All systems are to cease operations immediatly.<br>";
 		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
 
-	public function rocketBooster(){
+	public function rocketBooster() {
 		echo "Launch is totally aborted.<br>";
 		
 	}
