@@ -3,10 +3,12 @@ include 'VoucherProvider.php';
 
 class VoucherCheck{
 
-	public function __construct(){}
+	public function __construct() {}
 
-	public function signIn(){
+	public function signIn() {
+		
 		$newVoucher = VoucherProvider::getVoucher();
+		
 	}
 
 }
