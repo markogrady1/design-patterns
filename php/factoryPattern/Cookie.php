@@ -16,12 +16,12 @@ protected $topping;
 protected $flavour;
 
 	public function mix(){
-		echo 'mix in the '.$this->flavour.'<br>';
+		echo 'mix in the ' . $this->flavour . '<br>';
 	}
 	public function bake(){
-		echo 'Baking and sprinkle '.$this->topping.' on top<br>';
+		echo 'Baking and sprinkle ' . $this->topping . ' on top<br>';
 	}
 	public function box(){
-		echo 'Your '.$this->name.' cookie is ready<br>';
+		echo 'Your ' . $this->name . ' cookie is ready<br>';
 	}
 }
