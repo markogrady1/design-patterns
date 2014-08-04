@@ -44,11 +44,13 @@ private $passengerNo;
 
 	public function retrieveStats($passID){
 	$this->passengerNo = 'Passenger: '.$passID;
-		return array(
-			'passenger'	=> $this->getPassengerDetails($passID),
-			'flight'	=> $this->getFlightDetails($passID),
-			'baggage'	=> $this->getBaggageDetails($passID)
-			);
+		$details =  array(
+				'passenger'	=> $this->getPassengerDetails($passID),
+				'flight'	=> $this->getFlightDetails($passID),
+				'baggage'	=> $this->getBaggageDetails($passID)
+				);
+				
+		return $details;
 	}
 
 	public function getPassengerDetails($passID){
@@ -57,6 +59,7 @@ private $passengerNo;
 		$passengerDetails .= ', '.$passenger->getPassengerName();
 		$passengerDetails .= ', '.$passenger->getPassengerAddress();
 		$passengerDetails .= ', '.$passenger->getPassengerAge();
+		
 		return $passengerDetails;
 	}
 
@@ -65,6 +68,7 @@ private $passengerNo;
 		$flightDetails 	= $flight->getFlightNo();
 		$flightDetails .= ', '.$flight->getAirLine();
 		$flightDetails .= ', '.$flight->getDepatureTime();
+		
 		return $flightDetails;
 	}
 
@@ -99,14 +103,17 @@ class Passenger{
 	}
 
 	public function getPassengerName(){
+		
 		return $this->passengerName;
 	}
 
 	public function getPassengerAddress(){
+		
 		return $this->passengerAddress;
 	}
 
 	public function getPassengerAge(){
+		
 		return $this->passengerAge;
 	}
 }
@@ -130,14 +137,17 @@ class Flight{
 	}
 
 	public function getFlightNo(){
+		
 		return $this->flightNo;
 	}
 
 	public function getAirLine(){
+		
 		return $this->airLine;
 	}
 
 	public function getDepatureTime(){
+		
 		return $this->depatureTime;
 	}
 }
@@ -161,14 +171,17 @@ class Baggage{
   	}  
 
   	public function getTotalWeight(){
+  		
   		return $this->totalWeight;
   	}
 
 	public function getAmount(){
+		
   		return $this->amount;
   	}
 
 	public function getAllAccountedFor(){
+		
   		return $this->allAccountedFor;
   	}
 
