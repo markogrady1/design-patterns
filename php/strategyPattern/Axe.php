@@ -1,8 +1,8 @@
 <?php namespace php\strategyPattern;
 
-class Axe implements Weapon{
+class Axe implements Weapon {
 
-	public function action(){
+	public function action() {
 		echo 'Swing Swing<br>';
 	}
 }
