@@ -9,21 +9,21 @@
 |===========================================================
 |
 */
-class CookieFactory{
+class CookieFactory {
 
 	private $cookie;
 
-	public function createCookie($type){
+	public function createCookie($type) {
 		$this->cookie = new Cookie;
-		if($type=='choc'){
+		if($type=='choc') {
 			$this->cookie = new Choc;
 		}
 
-		if($type == 'double-choc'){
+		if($type == 'double-choc') {
 			$this->cookie = new DoubleChoc;
 		} 
 
-		if($type == 'hazlenut'){
+		if($type == 'hazlenut') {
 			$this->cookie = new Hazlenut;
 		}
 		
