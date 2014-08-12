@@ -9,14 +9,14 @@
 |===========================================================
 |
 */
-class CookieStore{
+class CookieStore {
 	private $factory = null;
 	private $cookie = null;
-	public function __construct(CookieFactory $factory){
+	public function __construct(CookieFactory $factory) {
 		$this->factory = $factory;
 	}
 	
-	public function takeOrder($type, Cookie $cookie){
+	public function takeOrder($type, Cookie $cookie) {
 		$this->cookie = $cookie;
 		$this->cookie = $this->factory->createCookie($type);
 		$this->cookie->mix();
