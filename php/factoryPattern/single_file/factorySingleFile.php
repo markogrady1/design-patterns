@@ -1,4 +1,5 @@
 <?php 
+
 /*
 |===========================================================
 |
@@ -9,44 +10,45 @@
 |===========================================================
 |
 */
-class Cookie{
+
+class Cookie {
 
 protected $name;
 protected $topping;
 protected $flavour;
 
-	public function mix(){
-		echo 'mix in the '.$this->flavour.'<br>';
+	public function mix() {
+		echo 'mix in the ' . $this->flavour . '<br>';
 	}
-	public function bake(){
-		echo 'Baking and sprinkle '.$this->topping.' on top<br>';
+	public function bake() {
+		echo 'Baking and sprinkle ' . $this->topping . ' on top<br>';
 	}
-	public function box(){
-		echo 'Your '.$this->name.' cookie is ready<br>';
+	public function box() {
+		echo 'Your ' . $this->name . ' cookie is ready<br>';
 	}
 }
 
-class Choc extends Cookie{
+class Choc extends Cookie {
 	
-	public function __construct(){
+	public function __construct() {
 		$this->toppin	= 'Choc chips';
 		$this->flavour 	= 'chocolate-flava';
 		$this->name 	= 'chocolate';
 	}
 }
 
-class DoubleChoc extends Cookie{
+class DoubleChoc extends Cookie {
 	
-	public function __construct(){
+	public function __construct() {
 		$this->topping 	= 'Choc-Chunks';
 		$this->flavour 	= 'Rich Choccy';
 		$this->name 	= 'double choc';
 	}
 }
 
-class Hazlenut extends Cookie{
+class Hazlenut extends Cookie {
 	
-	public function __construct(){
+	public function __construct() {
 		$this->topping 	= 'hazlenut-bits';
 		$this->flavour 	= 'nutty';
 		$this->name 	= 'hazlenut';
@@ -63,21 +65,21 @@ class Hazlenut extends Cookie{
 |===========================================================
 |
 */
-class CookieFactory{
+class CookieFactory {
 
 	private $cookie;
 
-	public function createCookie($type){
+	public function createCookie($type) {
 		$this->cookie = new Cookie;
-		if($type=='choc'){
+		if($type == 'choc') {
 			$this->cookie = new Choc;
 		}
 
-		if($type == 'double-choc'){
+		if($type == 'double-choc') {
 			$this->cookie = new DoubleChoc;
 		} 
 
-		if($type == 'hazlenut'){
+		if($type == 'hazlenut') {
 			$this->cookie = new Hazlenut;
 		}
 		
@@ -95,14 +97,15 @@ class CookieFactory{
 |===========================================================
 |
 */
-class CookieStore{
+class CookieStore {
 	private $factory = null;
 	private $cookie = null;
+	
 	public function __construct(CookieFactory $factory){
 		$this->factory = $factory;
 	}
 	
-	public function takeOrder($type, Cookie $cookie){
+	public function takeOrder($type, Cookie $cookie) {
 		$this->cookie = $cookie;
 		$this->cookie = $this->factory->createCookie($type);
 		$this->cookie->mix();
@@ -125,9 +128,9 @@ $cookie = new Cookie();
 
 $cs = new CookieStore(new CookieFactory());
 
-$cs->takeOrder('double-choc',$cookie);
+$cs->takeOrder('double-choc', $cookie);
 
-$cs->takeOrder('choc',$cookie);
+$cs->takeOrder('choc', $cookie);
 
-$cs->takeOrder('hazlenut',$cookie);
+$cs->takeOrder('hazlenut', $cookie);
 
