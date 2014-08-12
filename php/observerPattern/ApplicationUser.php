@@ -9,18 +9,18 @@
 |======================================================================
 |
 */
-class ApplicationUser implements User{
+class ApplicationUser implements User {
 	private $city;
 	private $price;
 	private $venue;
 	private $data;
 
-	public function userReg(Administrator $admin){
+	public function userReg(Administrator $admin) {
 		$this->data = $admin;
 		$this->data->registerUser(new ApplicationUser);
 	}
 	
-	public function update($city, $price, $venue){
+	public function update($city, $price, $venue) {
 		$this->city = $city;
 		$this->price = $price;
 		$this->venue = $venue;
