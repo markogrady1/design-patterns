@@ -1,4 +1,5 @@
 package facadePattern;
+
 /*
 |========================================================================
 |------------------------------------------------------------------------
@@ -8,6 +9,7 @@ package facadePattern;
 |------------------------------------------------------------------------
 |========================================================================
 */
+
 public class Baggage {
 	private String id;
 	private String amount = "4";
@@ -19,14 +21,17 @@ public class Baggage {
 	}
 
 	public String getAmount() {
+		
 		return this.amount;
 	}
 
 	public String getTotalWeight() {
+		
 		return this.totalWeight;
 	}
 
 	public String getAllAccountedFor() {
+		
 		return this.allAccountedFor;
 	}
 }
