@@ -37,14 +37,17 @@ public class Passenger {
 	}
 
 	public String getPassengerName() {
+		
 		return this.passengerName;
 	}
 
 	public String getPassengerAddress() {
+		
 		return this.passengerAddress;
 	}
 
 	public String getPassengerAge() {
+		
 		return this.passengerAge;
 	}
 }
@@ -61,14 +64,17 @@ public class Flight {
 	}
 
 	public String getFlightNo() {
+		
 		return this.flightNo;
 	}
 
 	public String getAirline() {
+		
 		return this.airLine;
 	}
 
 	public String getDepartureTime() {
+		
 		return this.departureTime;
 	}
 }
@@ -84,14 +90,17 @@ public class Baggage {
 	}
 
 	public String getAmount() {
+		
 		return this.amount;
 	}
 
 	public String getTotalWeight() {
+		
 		return this.totalWeight;
 	}
 
 	public String getAllAccountedFor() {
+		
 		return this.allAccountedFor;
 	}
 }
@@ -107,6 +116,7 @@ public class DataFacade {
 		this.data[0] = getPassengerDetails(id);
 		this.data[1] = getFlightDetails(id);
 		this.data[2] = getBaggageDetails(id);
+		
 		return data;
 	}
 
@@ -115,6 +125,7 @@ public class DataFacade {
 		String passengerData = passenger.getPassengerName();
 		passengerData += ", " + passenger.getPassengerAddress();
 		passengerData += ", " + passenger.getPassengerAge();
+		
 		return passengerData;
 	}
 
@@ -123,6 +134,7 @@ public class DataFacade {
 		String flightData = flight.getFlightNo();
 		flightData += ", " + flight.getAirline();
 		flightData += ", " + flight.getDepartureTime();
+		
 		return flightData;
 	}
 
@@ -131,6 +143,7 @@ public class DataFacade {
 		String baggageData = baggage.getAmount();
 		baggageData += ", " + baggage.getTotalWeight();
 		baggageData += ", " + baggage.getAllAccountedFor();
+		
 		return baggageData;
 	}
 }
