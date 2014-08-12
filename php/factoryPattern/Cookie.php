@@ -9,19 +9,19 @@
 |===========================================================
 |
 */
-class Cookie{
+class Cookie {
 
 protected $name;
 protected $topping;
 protected $flavour;
 
-	public function mix(){
+	public function mix() {
 		echo 'mix in the ' . $this->flavour . '<br>';
 	}
-	public function bake(){
+	public function bake() {
 		echo 'Baking and sprinkle ' . $this->topping . ' on top<br>';
 	}
-	public function box(){
+	public function box() {
 		echo 'Your ' . $this->name . ' cookie is ready<br>';
 	}
 }
