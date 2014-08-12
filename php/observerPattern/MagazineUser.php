@@ -9,17 +9,17 @@
 |======================================================================
 |
 */
-class MagazineUser implements User{
+class MagazineUser implements User {
 	private $city;
 	private $price;
 	private $venue;
 
-	public function userReg(Administrator $admin){
+	public function userReg(Administrator $admin) {
 		$this->data = $admin;
 		$this->data->registerUser(new MagazineUser);
 	}
 	
-	public function update($city, $price, $venue){
+	public function update($city, $price, $venue) {
 		$this->city = $city;
 		$this->price = $price;
 		$this->venue = $venue;
