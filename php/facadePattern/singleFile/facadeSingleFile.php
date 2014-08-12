@@ -1,34 +1,34 @@
 <?php  
 
-class ClientData{
+class ClientData {
 	private $passenger;
 	private $flight;
 	private $baggage;
 	
-    public function setPassenger($passenger){
-		print $this->passenger = $passenger.'<br>';
+    public function setPassenger($passenger) {
+		print $this->passenger = $passenger . '<br>';
 	}
 
-	public function setFlight($flight){
-		print 'Flight: '.$this->flight = $flight.'<br>';
+	public function setFlight($flight) {
+		print 'Flight: ' . $this->flight = $flight . '<br>';
 	}
 
-	public function setBaggage($baggage){
-		print 'Baggage: '.$this->baggage = $baggage;
+	public function setBaggage($baggage) {
+		print 'Baggage: ' . $this->baggage = $baggage;
 	}
 }
 
 
 
-class Statistics{
+class Statistics {
 
 	private $facade;
 
-	public function __construct(DataFacade $facade){ 
+	public function __construct(DataFacade $facade) { 
 		$this->facade = $facade;
 	}
 
-	public function retrieveData($passID){
+	public function retrieveData($passID) {
 		$clientData = new ClientData();
 		$allData = $this->facade->retrieveStats($passID);
 		$clientData->setPassenger($allData['passenger']);
@@ -42,8 +42,8 @@ class DataFacade {
 
 private $passengerNo;
 
-	public function retrieveStats($passID){
-	$this->passengerNo = 'Passenger: '.$passID;
+	public function retrieveStats($passID) {
+	$this->passengerNo = 'Passenger: ' . $passID;
 		$details =  array(
 				'passenger'	=> $this->getPassengerDetails($passID),
 				'flight'	=> $this->getFlightDetails($passID),
@@ -53,30 +53,30 @@ private $passengerNo;
 		return $details;
 	}
 
-	public function getPassengerDetails($passID){
+	public function getPassengerDetails($passID) {
 		$passenger = new Passenger($passID);
 		$passengerDetails = $this->passengerNo;
-		$passengerDetails .= ', '.$passenger->getPassengerName();
-		$passengerDetails .= ', '.$passenger->getPassengerAddress();
-		$passengerDetails .= ', '.$passenger->getPassengerAge();
+		$passengerDetails .= ', ' . $passenger->getPassengerName();
+		$passengerDetails .= ', ' . $passenger->getPassengerAddress();
+		$passengerDetails .= ', ' . $passenger->getPassengerAge();
 		
 		return $passengerDetails;
 	}
 
-	public function getFlightDetails($passID){
+	public function getFlightDetails($passID) {
 		$flight = new Flight($passID);
 		$flightDetails 	= $flight->getFlightNo();
-		$flightDetails .= ', '.$flight->getAirLine();
-		$flightDetails .= ', '.$flight->getDepatureTime();
+		$flightDetails .= ', ' . $flight->getAirLine();
+		$flightDetails .= ', ' . $flight->getDepatureTime();
 		
 		return $flightDetails;
 	}
 
-	public function getBaggageDetails($passID){
+	public function getBaggageDetails($passID) {
 		$baggage = new Baggage($passID);
 		$bagDetails = $baggage->getAmount();
-		$bagDetails .= ', '.$baggage->getTotalWeight();
-		$bagDetails .= ', '.$baggage->getAllAccountedFor();
+		$bagDetails .= ', ' . $baggage->getTotalWeight();
+		$bagDetails .= ', ' . $baggage->getAllAccountedFor();
 
 		return $bagDetails;
 	}
@@ -91,28 +91,28 @@ private $passengerNo;
 |--------------------------------------------------------------------------
 |==========================================================================
 */
-class Passenger{
+class Passenger {
 
 	private $passengerName = 'Bob Brown'; 
 	private $passengerAddress = 'London';
 	private $passengerAge = '41';
 	private $id;
 
-	public function __construct($passID){
+	public function __construct($passID) {
 		$this->id = $passID;
 	}
 
-	public function getPassengerName(){
+	public function getPassengerName() {
 		
 		return $this->passengerName;
 	}
 
-	public function getPassengerAddress(){
+	public function getPassengerAddress() {
 		
 		return $this->passengerAddress;
 	}
 
-	public function getPassengerAge(){
+	public function getPassengerAge() {
 		
 		return $this->passengerAge;
 	}
@@ -126,27 +126,27 @@ class Passenger{
 |------------------------------------------------------------------------
 |========================================================================
 */
-class Flight{ 
+class Flight { 
   private $flightNo = 'A1W78783';
   private $airLine = 'PHPAir';
   private $depatureTime = '11-10-14 | 04:43';
   private $id;
 
-	public function __construct($passID){
+	public function __construct($passID) {
 		$this->id = $passID;
 	}
 
-	public function getFlightNo(){
+	public function getFlightNo() {
 		
 		return $this->flightNo;
 	}
 
-	public function getAirLine(){
+	public function getAirLine() {
 		
 		return $this->airLine;
 	}
 
-	public function getDepatureTime(){
+	public function getDepatureTime() {
 		
 		return $this->depatureTime;
 	}
@@ -160,27 +160,27 @@ class Flight{
 |------------------------------------------------------------------------
 |========================================================================
 */
-class Baggage{
+class Baggage {
   private $totalWeight = '5KG';
   private $amount = '3';
   private $allAccountedFor = 'true';
   private $id;
 
-  	public function __construct($passID){
+  	public function __construct($passID) {
 		$this->id = $passID;
   	}  
 
-  	public function getTotalWeight(){
+  	public function getTotalWeight() {
   		
   		return $this->totalWeight;
   	}
 
-	public function getAmount(){
+	public function getAmount() {
 		
   		return $this->amount;
   	}
 
-	public function getAllAccountedFor(){
+	public function getAllAccountedFor() {
 		
   		return $this->allAccountedFor;
   	}
@@ -189,4 +189,5 @@ class Baggage{
 
 
 $stats = new Statistics(new DataFacade());
+
 $stats->retrieveData('319YX');
