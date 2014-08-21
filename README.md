@@ -23,4 +23,4 @@ PHP
 - State
 - Strategy
 
-more patterns in production.
+More patterns will be added soon.
