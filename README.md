@@ -16,11 +16,11 @@ PHP
 -
 - **Decorator**
 - **Facade**
-- Factory
-- Observer
-- Proxy
-- Singleton
-- State
-- Strategy
+- **Factory**
+- **Observer**
+- **Proxy**
+- **Singleton**
+- **State**
+- **Strategy**
 
 More patterns will be added soon.
