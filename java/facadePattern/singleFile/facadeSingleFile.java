@@ -27,10 +27,15 @@ public class Statistics {
 */
 
 public class Passenger {
+	
 	private String id;
+	
 	private String passengerName = "Billy Bob";
+	
 	private String passengerAddress = "New York";
+	
 	private String passengerAge = "23";
+	
 
 	public Passenger(String id) {
 		this.id = id;
@@ -54,9 +59,13 @@ public class Passenger {
 
 
 public class Flight {
+	
 	private String id;
+	
 	private String flightNo = "AM676798";
+	
 	private String airLine = "JavaAir";
+	
 	private String departureTime = "12-11-14  10:43";
 
 	public Flight(String id) {
@@ -80,10 +89,15 @@ public class Flight {
 }
 
 public class Baggage {
+	
 	private String id;
+	
 	private String amount = "4";
+	
 	private String totalWeight = "3KG";
+	
 	private String allAccountedFor = "true";
+	
 
 	public Baggage(String id) {
 		this.id = id;
@@ -113,35 +127,52 @@ public class DataFacade {
 	}
 
 	public String[] retrieveData(String id) {
+		
 		this.data[0] = getPassengerDetails(id);
+		
 		this.data[1] = getFlightDetails(id);
+		
 		this.data[2] = getBaggageDetails(id);
+		
 		
 		return data;
 	}
 
 	public String getPassengerDetails(String id) {
+		
 		Passenger passenger = new Passenger(id);
+		
 		String passengerData = passenger.getPassengerName();
+		
 		passengerData += ", " + passenger.getPassengerAddress();
+		
 		passengerData += ", " + passenger.getPassengerAge();
 		
 		return passengerData;
 	}
 
 	public String getFlightDetails(String id) {
+		
 		Flight flight = new Flight(id);
+		
 		String flightData = flight.getFlightNo();
+		
 		flightData += ", " + flight.getAirline();
+		
 		flightData += ", " + flight.getDepartureTime();
+		
 		
 		return flightData;
 	}
 
 	public String getBaggageDetails(String id) {
+		
 		Baggage baggage = new Baggage(id);
+		
 		String baggageData = baggage.getAmount();
+		
 		baggageData += ", " + baggage.getTotalWeight();
+		
 		baggageData += ", " + baggage.getAllAccountedFor();
 		
 		return baggageData;
