@@ -7,27 +7,27 @@
 |------------------------------------------------------------------------
 |========================================================================
 */
-class Baggage{
+class Baggage {
   private $totalWeight = '5KG';
   private $amount = '3';
   private $allAccountedFor = 'true';
   private $id;
 
-  	public function __construct($passID){
+  	public function __construct($passID) {
 		$this->id = $passID;
   	}  
 
-  	public function getTotalWeight(){
+  	public function getTotalWeight() {
   		
   		return $this->totalWeight;
   	}
 
-	public function getAmount(){
+	public function getAmount() {
 		
   		return $this->amount;
   	}
 
-	public function getAllAccountedFor(){
+	public function getAllAccountedFor() {
 		
   		return $this->allAccountedFor;
   	}

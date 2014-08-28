@@ -4,8 +4,8 @@ class DataFacade {
 
 private $passengerNo;
 
-	public function retrieveStats($passID){
-		$this->passengerNo = 'Passenger: '.$passID;
+	public function retrieveStats($passID) {
+		$this->passengerNo = 'Passenger: ' . $passID;
 		$details =  array(
 				'passenger'	=> $this->getPassengerDetails($passID),
 				'flight'	=> $this->getFlightDetails($passID),
@@ -15,7 +15,7 @@ private $passengerNo;
 		return $details;		
 	} 
 
-	public function getPassengerDetails($passID){
+	public function getPassengerDetails($passID) {
 		$passenger = new Passenger($passID);
 		$passengerDetails = $this->passengerNo;
 		$passengerDetails .= ', ' . $passenger->getPassengerName();
@@ -25,7 +25,7 @@ private $passengerNo;
 		return $passengerDetails;
 	} 
 
-	public function getFlightDetails($passID){
+	public function getFlightDetails($passID) {
 		$flight = new Flight($passID);
 		$flightDetails 	= $flight->getFlightNo();
 		$flightDetails .= ', ' . $flight->getAirLine();
@@ -34,7 +34,7 @@ private $passengerNo;
 		return $flightDetails;
 	}
 
-	public function getBaggageDetails($passID){
+	public function getBaggageDetails($passID) {
 		$baggage = new Baggage($passID);
 		$bagDetails = $baggage->getAmount();
 		$bagDetails .= ', ' . $baggage->getTotalWeight();
