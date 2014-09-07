@@ -21,7 +21,7 @@ class Keyboard extends HardwareDecorator{
 	/**
 	* Get cost of hardware
 	* 
-	* @return string
+	* @return int
 	*/
 	public function cost(){
 		
