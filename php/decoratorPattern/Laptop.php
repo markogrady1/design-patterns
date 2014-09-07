@@ -7,7 +7,7 @@ class Laptop extends Hardware{
 	}
 	
 	/**
-	* Get cost of the laptop
+	* Gets cost of the laptop
 	*
 	* @return int
 	*/
