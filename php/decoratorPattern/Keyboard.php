@@ -8,7 +8,7 @@ class Keyboard extends HardwareDecorator{
 	}
 	
 	/**
-	* Get decription of hardware
+	* Gets decription of hardware
 	* 
 	* @return string
 	*/
@@ -19,7 +19,7 @@ class Keyboard extends HardwareDecorator{
 	}
 	
 	/**
-	* Get cost of hardware
+	* Gets cost of hardware
 	* 
 	* @return int
 	*/
