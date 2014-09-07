@@ -6,6 +6,11 @@ class Laptop extends Hardware{
 		$this->description ="19'' Laptop";
 	}
 	
+	/**
+	* Get cost of the laptop
+	*
+	* @return int
+	*/
 	public function cost(){
 		
 		return 200;
