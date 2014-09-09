@@ -9,33 +9,33 @@
 */
 class Baggage {
 	
-/**
- * Total weight of baggage
- * 
- * @var string $totalWeight
- */
-  private $totalWeight = '5KG';
-  
-/**
- * Default baggage ammount
- * 
- * @var string $ammount
- */
-  private $amount = '3';
-  
-/**
- * Total weight of baggage
- * 
- * @var string $accountedFor
- */
-  private $allAccountedFor = 'true';
-  
-/**
- * Baggage ID
- * 
- * @var string $id
- */
-  private $id;
+	/**
+	 * Total weight of baggage
+	 * 
+	 * @var string $totalWeight
+	 */
+	  private $totalWeight = '5KG';
+	  
+	/**
+	 * Default baggage ammount
+	 * 
+	 * @var string $ammount
+	 */
+	  private $amount = '3';
+	  
+	/**
+	 * Total weight of baggage
+	 * 
+	 * @var string $accountedFor
+	 */
+	  private $allAccountedFor = 'true';
+	  
+	/**
+	 * Baggage ID
+	 * 
+	 * @var string $id
+	 */
+	  private $id;
 	
 	/**
 	 * Obtain ID when object is created
