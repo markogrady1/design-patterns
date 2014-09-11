@@ -4,6 +4,12 @@ class DataFacade {
 
 private $passengerNo;
 
+       /**
+	* Assign various statistics for a given passenger to an array
+	* 
+	* @param string $passID
+	* @return array 
+	*/
 	public function retrieveStats($passID) {
 		$this->passengerNo = 'Passenger: ' . $passID;
 		$details =  array(
@@ -14,7 +20,13 @@ private $passengerNo;
 				
 		return $details;		
 	} 
-
+	
+       /**
+	* Set a given passengers details into a string
+	* 
+	* @param string $passID
+	* @return string
+	*/
 	public function getPassengerDetails($passID) {
 		$passenger = new Passenger($passID);
 		$passengerDetails = $this->passengerNo;
@@ -24,7 +36,7 @@ private $passengerNo;
 		
 		return $passengerDetails;
 	} 
-
+	
 	public function getFlightDetails($passID) {
 		$flight = new Flight($passID);
 		$flightDetails 	= $flight->getFlightNo();
