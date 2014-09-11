@@ -22,7 +22,7 @@ private $passengerNo;
 	} 
 	
        /**
-	* Set a given passengers details into a string
+	* Get a given passengers details in string format
 	* 
 	* @param string $passID
 	* @return string
@@ -37,6 +37,12 @@ private $passengerNo;
 		return $passengerDetails;
 	} 
 	
+       /**
+	* Get a given passengers flight details in string format
+	* 
+	* @param string $passID
+	* @return string
+	*/
 	public function getFlightDetails($passID) {
 		$flight = new Flight($passID);
 		$flightDetails 	= $flight->getFlightNo();
@@ -45,7 +51,13 @@ private $passengerNo;
 		
 		return $flightDetails;
 	}
-
+	
+       /**
+	* Get a given passengers baggage details in string format
+	* 
+	* @param string $passID
+	* @return string
+	*/
 	public function getBaggageDetails($passID) {
 		$baggage = new Baggage($passID);
 		$bagDetails = $baggage->getAmount();
