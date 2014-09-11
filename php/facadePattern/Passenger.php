@@ -8,10 +8,33 @@
 |==========================================================================
 */
 class Passenger{
-
+	
+       /**
+	* Name of the passenger
+	* 
+	* @var string $passengerName
+	*/
 	private $passengerName = 'Bob Brown'; 
+	
+       /**
+	* Address of the passenger
+	* 
+	* @var string $passengerAddress
+	*/
 	private $passengerAddress = 'London';
+	
+       /**
+	* Age of the passenger
+	* 
+	* @var string $passengerAge
+	*/
 	private $passengerAge = '41';
+	
+       /**
+	* The passenger ID
+	* 
+	* @var string $id
+	*/
 	private $id;
 
 	public function __construct($passID){
