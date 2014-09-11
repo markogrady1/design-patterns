@@ -41,16 +41,31 @@ class Passenger{
 		$this->id = $passID;
 	}
 
+       /**
+	* Get the passenger name
+	* 
+	* @return string
+	*/
 	public function getPassengerName(){
 		
 		return $this->passengerName;
 	}
-
+	
+       /**
+	* Get the address of the passenger
+	* 
+	* @return string
+	*/
 	public function getPassengerAddress(){
 		
 		return $this->passengerAddress;
 	}
-
+	
+       /**
+	* Get the age of the passenger
+	* 
+	* @return string
+	*/
 	public function getPassengerAge(){
 		
 		return $this->passengerAge;
