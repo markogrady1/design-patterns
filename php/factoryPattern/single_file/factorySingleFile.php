@@ -1,28 +1,37 @@
 <?php 
 
-/*
-|===========================================================
-|
-|-----------------------------------------------------------
-|	The Cookie class is the 'product' in this pattern
-|-----------------------------------------------------------
-|
-|===========================================================
-|
-*/
-
+/**
+ * Product of the factory patter
+ */
 class Cookie {
 
 protected $name;
 protected $topping;
 protected $flavour;
-
+	
+	/**
+	 * Mix the flavour of the cookie
+	 * 
+	 * @return void
+	 */
 	public function mix() {
 		echo 'mix in the ' . $this->flavour . '<br>';
 	}
+	
+	/**
+	 * Bake the cookie
+	 * 
+	 * @return void
+	 */
 	public function bake() {
 		echo 'Baking and sprinkle ' . $this->topping . ' on top<br>';
 	}
+		
+	/**
+	 * Prepare for sale
+	 * 
+	 * @return void
+	 */
 	public function box() {
 		echo 'Your ' . $this->name . ' cookie is ready<br>';
 	}
@@ -68,7 +77,15 @@ class Hazlenut extends Cookie {
 class CookieFactory {
 
 	private $cookie;
-
+		
+	/**
+	 * Create the cookie
+	 * 
+	 * @param string $type
+	 * 
+	 * 
+	 * @return Cookie
+	 */
 	public function createCookie($type) {
 		$this->cookie = new Cookie;
 		if($type == 'choc') {
@@ -98,9 +115,28 @@ class CookieFactory {
 |
 */
 class CookieStore {
+		
+	/**
+	 * factory intstance
+	 * 
+	 * @var CookieFactory $factory
+	 */
 	private $factory = null;
+	
+		
+	/**
+	 * Cookie instance 
+	 * 
+	 * @var Cookie $cookie
+	 */
 	private $cookie = null;
 	
+	/**
+	 * Injection of dependencies
+	 * 
+	 * @param CookieFactory $factory
+	 * @return void
+	 */
 	public function __construct(CookieFactory $factory){
 		$this->factory = $factory;
 	}
