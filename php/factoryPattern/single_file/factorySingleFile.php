@@ -141,6 +141,13 @@ class CookieStore {
 		$this->factory = $factory;
 	}
 	
+	/**
+	 * Order of customer
+	 * 
+	 * @param string $type
+	 * @param Cookie $cookie
+	 * @return Cookie
+	 */
 	public function takeOrder($type, Cookie $cookie) {
 		$this->cookie = $cookie;
 		$this->cookie = $this->factory->createCookie($type);
