@@ -23,17 +23,20 @@ class ClientData {
 class Statistics {
 
 	private $facade;
-
-	public function __construct(DataFacade $facade) { 
+	
+	private $clientData;
+	
+	public function __construct(DataFacade $facade, ClientData $clientData) { 
 		$this->facade = $facade;
+		$this->clientData = $clientData;
 	}
 
 	public function retrieveData($passID) {
-		$clientData = new ClientData();
+		
 		$allData = $this->facade->retrieveStats($passID);
-		$clientData->setPassenger($allData['passenger']);
-		$clientData->setFlight($allData['flight']);
-		$clientData->setBaggage($allData['baggage']);
+		$this->clientData->setPassenger($allData['passenger']);
+		$this->clientData->setFlight($allData['flight']);
+		$this->clientData->setBaggage($allData['baggage']);
 	}
 }
 
@@ -188,6 +191,6 @@ class Baggage {
 }
 
 
-$stats = new Statistics(new DataFacade());
+$stats = new Statistics(new DataFacade(), new ClientData());
 
 $stats->retrieveData('319YX');
