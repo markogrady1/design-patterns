@@ -1,6 +1,7 @@
 <?php  
 
 class ClientData {
+	
 	/**
 	 * Passenger details
 	 * 
