@@ -1,18 +1,53 @@
 <?php  
 
 class ClientData {
+	/**
+	 * Passenger details
+	 * 
+	 * @var array $passenger
+	 */
 	private $passenger;
+
+	 /**
+	  * Flight details
+	  * 
+	  * @var array $flight
+	  */	
 	private $flight;
+	
+	 /**
+	  * Baggage details
+	  * 
+	  * @var array $baggage
+	  */
 	private $baggage;
 	
-    public function setPassenger($passenger) {
+	/**
+	 * Passenger details set and displayed
+	 * 
+	 * @param array $passenger
+	 * @return void
+	 */
+    	public function setPassenger($passenger) {
 		print $this->passenger = $passenger . '<br>';
 	}
-
+	
+	/**
+	 * Flight details set and displayed
+	 * 
+	 * @param array $flight
+	 * @return void
+	 */
 	public function setFlight($flight) {
 		print 'Flight: ' . $this->flight = $flight . '<br>';
 	}
-
+	
+	/**
+	 * baggage details set and displayed
+	 * 
+	 * @param array $baggage
+	 * @return void
+	 */
 	public function setBaggage($baggage) {
 		print 'Baggage: ' . $this->baggage = $baggage;
 	}
@@ -21,16 +56,32 @@ class ClientData {
 
 
 class Statistics {
-
+	
+	/**
+	 * Facade instance
+	 * 
+	 * @var DataFacade $facade
+	 */
 	private $facade;
 	
+	/**
+	 * ClientData instance
+	 * 
+	 * @var ClientData $clientData
+	 */
 	private $clientData;
 	
 	public function __construct(DataFacade $facade, ClientData $clientData) { 
 		$this->facade = $facade;
 		$this->clientData = $clientData;
 	}
-
+	
+	/**
+	 * Retrieve passenger and flight details and assign the values
+	 * 
+	 * @param string $passID
+	 * @return void
+	 */
 	public function retrieveData($passID) {
 		
 		$allData = $this->facade->retrieveStats($passID);
