@@ -4,7 +4,7 @@ Personal library of design patterns for PHP and Java.
 -
 Java
 -
-- **Facade**
+- [**Facade**](https://github.com/markogrady1/design-patterns/tree/master/php/decoratorPattern)
 - **Factory**
 - **Observer**
 - **Proxy**
