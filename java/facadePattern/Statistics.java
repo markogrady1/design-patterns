@@ -1,17 +1,19 @@
 package facadePattern;
 
 public class Statistics {
+	
 	private DataFacade facade;
+	private ClientData client;
 
-	public Statistics(DataFacade facade) {
+	public Statistics(DataFacade facade, ClientData client) {
 		this.facade = facade;
+		this.client = client;
 	}
 
 	public void getData(String id) {
-		ClientData client = new ClientData();
 		String[] allData = this.facade.retrieveData(id);
-		client.setPassengerDetails(allData);
-		client.setFlightDetails(allData);
-		client.setBaggageDetails(allData);
+		this.client.setPassengerDetails(allData);
+		this.client.setFlightDetails(allData);
+		this.client.setBaggageDetails(allData);
 	}
 }
