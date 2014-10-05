@@ -102,6 +102,12 @@ class DataFacade {
 
 private $passengerNo;
 
+	/**
+	 * Store details of passengers flight into array
+	 * 
+	 * @param string $passID
+	 * @return array
+	 */
 	public function retrieveStats($passID) {
 	$this->passengerNo = 'Passenger: ' . $passID;
 		$details =  array(
@@ -113,6 +119,12 @@ private $passengerNo;
 		return $details;
 	}
 
+	/**
+	 * Return various details of a given passenger
+	 * 
+	 * @param string $passID
+	 * @return string $passengerDetails
+	 */
 	public function getPassengerDetails($passID) {
 		$passenger = new Passenger($passID);
 		$passengerDetails = $this->passengerNo;
@@ -123,6 +135,12 @@ private $passengerNo;
 		return $passengerDetails;
 	}
 
+	/**
+	 * Return various details of a given passengers flight
+	 * 
+	 * @param string $passID
+	 * @return string $flightDetails
+	 */
 	public function getFlightDetails($passID) {
 		$flight = new Flight($passID);
 		$flightDetails 	= $flight->getFlightNo();
@@ -131,7 +149,13 @@ private $passengerNo;
 		
 		return $flightDetails;
 	}
-
+	
+	/**
+	 * Return various details of a given passengers baggage
+	 * 
+	 * @param string $passID
+	 * @return string $bagDetails
+	 */
 	public function getBaggageDetails($passID) {
 		$baggage = new Baggage($passID);
 		$bagDetails = $baggage->getAmount();
@@ -152,26 +176,66 @@ private $passengerNo;
 |==========================================================================
 */
 class Passenger {
-
+	
+	/**
+	 * Name of passenger
+	 * 
+	 * @var string $passengerName
+	 */
 	private $passengerName = 'Bob Brown'; 
+	
+	/**
+	 * Address of passenger
+	 * 
+	 * @var string $passengerAddress
+	 */
 	private $passengerAddress = 'London';
+	
+	/**
+	 * Age of passenger 
+	 * 
+	 * @var string $passengerAge
+	 */
 	private $passengerAge = '41';
+	
+	/**
+	 * passenger ID
+	 * 
+	 * @var string $id
+	 */
 	private $id;
 
 	public function __construct($passID) {
 		$this->id = $passID;
 	}
 
+	/**
+	 * Return nane of passenger
+	 * 
+	 * @return string $passengerName
+	 */
 	public function getPassengerName() {
 		
 		return $this->passengerName;
 	}
 
+
+	/**
+	 * Return address of passenger
+	 * 
+	 * @return string $passengerAddress
+	 */
 	public function getPassengerAddress() {
 		
 		return $this->passengerAddress;
 	}
 
+
+	/**
+	 * Return age of passenger
+	 * 
+	 * @return string $passengerAge
+	 */
 	public function getPassengerAge() {
 		
 		return $this->passengerAge;
@@ -187,25 +251,64 @@ class Passenger {
 |========================================================================
 */
 class Flight { 
-  private $flightNo = 'A1W78783';
-  private $airLine = 'PHPAir';
-  private $depatureTime = '11-10-14 | 04:43';
-  private $id;
+		
+	/**
+	 * Reference number of flight
+	 * 
+	 * @var string $flightNo
+	 */
+  	private $flightNo = 'A1W78783';
+  		
+	/**
+	 * Name of airline
+	 * 
+	 * @var string $airline
+	 */
+  	private $airline = 'PHPAir';
+  		
+	/**
+	 * Time of flight departure
+	 * 
+	 * @var string $departureTime
+	 */
+  	private $depatureTime = '11-10-14 | 04:43';
+  		
+	/**
+	 * Passenger ID
+	 * 
+	 * @var string $id
+	 */
+  	private $id;
 
 	public function __construct($passID) {
 		$this->id = $passID;
 	}
 
+	/**
+	 * Return flight number
+	 * 
+	 * @return string $flightNo
+	 */
 	public function getFlightNo() {
 		
 		return $this->flightNo;
 	}
 
+	/**
+	 * Return name of airline
+	 * 
+	 * @return string $airline
+	 */
 	public function getAirLine() {
 		
-		return $this->airLine;
+		return $this->airline;
 	}
 
+	/**
+	 * Return time of departure
+	 * 
+	 * @return string $departureTime
+	 */
 	public function getDepatureTime() {
 		
 		return $this->depatureTime;
@@ -221,25 +324,69 @@ class Flight {
 |========================================================================
 */
 class Baggage {
-  private $totalWeight = '5KG';
-  private $amount = '3';
-  private $allAccountedFor = 'true';
-  private $id;
+	  		
+	/**
+	 * baggage weight
+	 * 
+	 * @var string $totalWeight
+	 */
+  	private $totalWeight = '5KG';
+  	  		
+	/**
+	 * Baggage amount
+	 * 
+	 * @var string $amount
+	 */
+  	private $amount = '3';
+  	  		
+	/**
+	 * Are all bags accounted for
+	 * 
+	 * @var boolean $allAccountedFor
+	 */
+  	private $allAccountedFor = 'true';
+  	  		
+	/**
+	 * Passenger ID
+	 * 
+	 * @var string $id
+	 */
+  	private $id;
 
+	/**
+	 * Constructor to assign passengers ID
+	 * 
+	 * @return viod
+	 */
   	public function __construct($passID) {
 		$this->id = $passID;
   	}  
 
+	/**
+	 * Return total weight of bags
+	 * 
+	 * @return string $totalWeight
+	 */
   	public function getTotalWeight() {
   		
   		return $this->totalWeight;
   	}
 
+	/**
+	 * Return amount of bags
+	 * 
+	 * @return string $amount
+	 */
 	public function getAmount() {
 		
   		return $this->amount;
   	}
 
+	/**
+	 * Return true if all bags are accounted for
+	 * 
+	 * @return string $allAccountedFor
+	 */
 	public function getAllAccountedFor() {
 		
   		return $this->allAccountedFor;
