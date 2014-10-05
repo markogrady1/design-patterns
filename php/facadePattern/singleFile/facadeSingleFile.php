@@ -342,9 +342,9 @@ class Baggage {
 	/**
 	 * Are all bags accounted for
 	 * 
-	 * @var boolean $allAccountedFor
+	 * @var boolean $isBaggageAccountedFor
 	 */
-  	private $allAccountedFor = 'true';
+  	private $isBaggageAccountedFor = 'true';
   	  		
 	/**
 	 * Passenger ID
@@ -389,7 +389,7 @@ class Baggage {
 	 */
 	public function getAllAccountedFor() {
 		
-  		return $this->allAccountedFor;
+  		return $this->isBaggageAccountedFor;
   	}
 
 }
