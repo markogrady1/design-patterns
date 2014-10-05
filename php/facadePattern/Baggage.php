@@ -28,7 +28,7 @@ class Baggage {
 	 * 
 	 * @var string $accountedFor
 	 */
-	  private $allAccountedFor = 'true';
+	  private $isBaggageAccountedFor = 'true';
 	  
 	/**
 	 * Baggage ID
@@ -73,7 +73,7 @@ class Baggage {
 	*/ 
 	public function getAllAccountedFor() {
 		
-  		return $this->allAccountedFor;
+  		return $this->isBaggageAccountedFor;
   	}
 
 }
