@@ -1,18 +1,54 @@
 <?php  
 
 class ClientData {
+	
+	/**
+	 * Passenger details
+	 * 
+	 * @var array $passenger
+	 */
 	private $passenger;
+
+	 /**
+	  * Flight details
+	  * 
+	  * @var array $flight
+	  */	
 	private $flight;
+	
+	 /**
+	  * Baggage details
+	  * 
+	  * @var array $baggage
+	  */
 	private $baggage;
 	
-    public function setPassenger($passenger) {
+	/**
+	 * Passenger details set and displayed
+	 * 
+	 * @param array $passenger
+	 * @return void
+	 */
+    	public function setPassenger($passenger) {
 		print $this->passenger = $passenger . '<br>';
 	}
-
+	
+	/**
+	 * Flight details set and displayed
+	 * 
+	 * @param array $flight
+	 * @return void
+	 */
 	public function setFlight($flight) {
 		print 'Flight: ' . $this->flight = $flight . '<br>';
 	}
-
+	
+	/**
+	 * baggage details set and displayed
+	 * 
+	 * @param array $baggage
+	 * @return void
+	 */
 	public function setBaggage($baggage) {
 		print 'Baggage: ' . $this->baggage = $baggage;
 	}
@@ -21,19 +57,43 @@ class ClientData {
 
 
 class Statistics {
-
+	
+	/**
+	 * Facade instance
+	 * 
+	 * @var DataFacade $facade
+	 */
 	private $facade;
-
-	public function __construct(DataFacade $facade) { 
+	
+	/**
+	 * ClientData instance
+	 * 
+	 * @var ClientData $clientData
+	 */
+	private $clientData;
+	
+	public function __construct(DataFacade $facade, ClientData $clientData) { 
+		
 		$this->facade = $facade;
+		
+		$this->clientData = $clientData;
 	}
-
+	
+	/**
+	 * Retrieve passenger and flight details and assign the values
+	 * 
+	 * @param string $passID
+	 * @return void
+	 */
 	public function retrieveData($passID) {
-		$clientData = new ClientData();
+		
 		$allData = $this->facade->retrieveStats($passID);
-		$clientData->setPassenger($allData['passenger']);
-		$clientData->setFlight($allData['flight']);
-		$clientData->setBaggage($allData['baggage']);
+		
+		$this->clientData->setPassenger($allData['passenger']);
+		
+		$this->clientData->setFlight($allData['flight']);
+		
+		$this->clientData->setBaggage($allData['baggage']);
 	}
 }
 
@@ -188,6 +248,6 @@ class Baggage {
 }
 
 
-$stats = new Statistics(new DataFacade());
+$stats = new Statistics(new DataFacade(), new ClientData());
 
 $stats->retrieveData('319YX');

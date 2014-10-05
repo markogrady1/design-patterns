@@ -16,17 +16,32 @@ class Flight{
 	public function __construct($passID){
 		$this->id = $passID;
 	}
-
+	
+       /**
+	* Get flight number
+	* 
+	* @return string
+	*/
 	public function getFlightNo(){
 		
 		return $this->flightNo;
 	}
-
+	
+       /**
+	* Get name of airline
+	* 
+	* @return string
+	*/
 	public function getAirLine(){
 		
 		return $this->airLine;
 	}
-
+	
+       /**
+	* Get flight departure time
+	* 
+	* @return string
+	*/
 	public function getDepatureTime(){
 		
 		return $this->depatureTime;

@@ -1,14 +1,16 @@
 package facadePattern;
 
 public class Statistics {
+	
 	private DataFacade facade;
-
-	public Statistics(DataFacade facade) {
+	private ClientData client;
+	
+	public Statistics(DataFacade facade, ClientData client) {
 		this.facade = facade;
+		this.client = client;
 	}
 
 	public void getData(String id) {
-		ClientData client = new ClientData();
 		String[] allData = this.facade.retrieveData(id);
 		client.setPassengerDetails(allData);
 		client.setFlightDetails(allData);
@@ -155,9 +157,9 @@ public class ClientData {
 
 
 public class FacadeDriver {
+	
 	public static void main (String[] args){
-		DataFacade data = new DataFacade();
-		Statistics statistics = new Statistics(data);
+		Statistics statistics = new Statistics(new DataFacade(), new ClientData());
 		statistics.getData("WX4983489");
 	}
 }
