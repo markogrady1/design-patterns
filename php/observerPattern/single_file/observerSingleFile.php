@@ -17,10 +17,40 @@ interface Administrator {
 }
 
 class AdminDesk implements Administrator {
+	
+	/**
+	 * User instance
+	 * 
+	 * @var User $user
+	 */
 	private $user;
+			
+	/**
+	 * Conference city
+	 * 
+	 * @var string $city
+	 */
 	private $city;
+			
+	/**
+	 * Conference price
+	 * 
+	 * @var string $price
+	 */
 	private $price;
+			
+	/**
+	 * Conference venue
+	 * 
+	 * @var string $venue
+	 */
 	private $venue;
+			
+	/**
+	 * Observer variable
+	 * 
+	 * @var array $observer
+	 */
 	private $observer = array();
 
 	public function registerUser(User $user) {
