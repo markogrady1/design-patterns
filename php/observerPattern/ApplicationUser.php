@@ -10,9 +10,33 @@
 |
 */
 class ApplicationUser implements User {
+	
+	/**
+	 * Conference city
+	 * 
+	 * @var string $city
+	 */
 	private $city;
+		
+	/**
+	 * Conference price
+	 * 
+	 * @var string $price
+	 */
 	private $price;
+		
+	/**
+	 * Administrator instance
+	 * 
+	 * @var string $venue
+	 */
 	private $venue;
+		
+	/**
+	 * Conference city
+	 * 
+	 * @var Administrator $admin
+	 */
 	private $data;
 
 	public function userReg(Administrator $admin) {
