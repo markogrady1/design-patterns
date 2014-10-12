@@ -21,7 +21,7 @@ class ApplicationUser implements User {
 	/**
 	 * Conference price
 	 * 
-	 * @var string $price
+	 * @var int $price
 	 */
 	private $price;
 		
@@ -39,11 +39,25 @@ class ApplicationUser implements User {
 	 */
 	private $data;
 
+	/**
+	 * Register user for conference
+	 * 
+	 * @param Administrator $admin
+	 * @return void
+	 */
 	public function userReg(Administrator $admin) {
 		$this->data = $admin;
 		$this->data->registerUser(new ApplicationUser);
 	}
 	
+	/**
+	 * Update details for conference
+	 * 
+	 * @param string $city
+	 * @param int $price
+	 * @param string $venue
+	 * @return void
+	 */
 	public function update($city, $price, $venue) {
 		$this->city = $city;
 		$this->price = $price;
