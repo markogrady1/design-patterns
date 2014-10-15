@@ -10,7 +10,14 @@
 |
 */
 class MagazineUser implements User {
+	
+	/**
+	 * Conference city
+	 * 
+	 * @var string $city
+	 */
 	private $city;
+	
 	private $price;
 	private $venue;
 
