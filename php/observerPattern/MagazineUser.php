@@ -24,13 +24,32 @@ class MagazineUser implements User {
 	 * @var int $price
 	 */
 	private $price;
+	/**
+	 * Conference venue
+	 * 
+	 * @var string $venue
+	 */
 	private $venue;
 
+	/**
+	 * Register user to conference
+	 * 
+	 * @param Administrator $admin
+	 * @return void
+	 */
 	public function userReg(Administrator $admin) {
 		$this->data = $admin;
 		$this->data->registerUser(new MagazineUser);
 	}
 	
+	/**
+	 * Update conference details
+	 * 
+	 * @param string $city
+	 * @param int $price 
+	 * @param string $venue
+	 * @return void
+	 */
 	public function update($city, $price, $venue) {
 		$this->city = $city;
 		$this->price = $price;
