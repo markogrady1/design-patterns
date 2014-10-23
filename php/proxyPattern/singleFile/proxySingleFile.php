@@ -51,7 +51,7 @@ class ProxyLogo implements Logo {
 	/**
 	 * Display the logo
 	 * 
-	 * @return void
+	 * @return Logo $display
 	 */
 	public function displayLogo() {
 		if(is_null($this->display))
