@@ -9,12 +9,25 @@ interface State {
 }
 
 class SystemsGo implements State {
+	
+	/**
+	 * Mission control instance
+	 * 
+	 * @var MissionControl $missionControl
+	 */
 	public $missionControl;
-
+	
+	/**
+	 * Set instance for mission control
+	 * 
+	 * @param MissionControl $missionControl
+	 * @return void
+	 */
 	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
-
+	
+	/**/
 	public function checkAllSystems() {
 		echo "All system are ready<br>";
 		$this->missionControl->setState($this->missionControl->getStartPowerUnits());
