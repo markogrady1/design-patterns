@@ -27,24 +27,48 @@ class SystemsGo implements State {
 		$this->missionControl = $missionControl;
 	}
 	
-	/**/
+	/**
+	 * Check all systems are stable and ready to go
+	 * 
+	 * @return void
+	 */
 	public function checkAllSystems() {
 		echo "All system are ready<br>";
 		$this->missionControl->setState($this->missionControl->getStartPowerUnits());
 	}
 	
+	/**
+	 * Print negative power unit statement
+	 * 
+	 * @return void
+	 */
 	public function startPowerUnits() {
 		echo "systems are not ready yet";
 	}
-	
+		
+	/**
+	 * Print not ready statement
+	 * 
+	 * @return void
+	 */
 	public function retractArms() {
 		echo "systems are not ready yet";
 	}
-	
+		
+	/**
+	 * Print power unit statement
+	 * 
+	 * @return void
+	 */
 	public function shutDown() {
 		echo "Order not given";
 	}
-	
+		
+	/**
+	 * Print power unit statement
+	 * 
+	 * @return void
+	 */
 	public function rocketBooster() {
 		echo "systems are not ready yet";
 	}
