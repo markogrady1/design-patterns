@@ -28,7 +28,7 @@ class SystemsGo implements State {
 	}
 	
 	/**
-	 * Check all systems are stable and ready to go
+	 *  set state in mission control
 	 * 
 	 * @return void
 	 */
@@ -56,7 +56,7 @@ class SystemsGo implements State {
 	}
 		
 	/**
-	 * Print power unit statement
+	 * Print order statement
 	 * 
 	 * @return void
 	 */
@@ -65,7 +65,7 @@ class SystemsGo implements State {
 	}
 		
 	/**
-	 * Print power unit statement
+	 * Print negative rocket booster statement
 	 * 
 	 * @return void
 	 */
@@ -75,17 +75,38 @@ class SystemsGo implements State {
 }
 
 class MainEngine implements State {
-	
+		
+	/**
+	 * Mission control instance
+	 * 
+	 * @var MissionControl $missionControl
+	 */
 	public $missionControl;
-	
+		
+	/**
+	 * Set instance for mission control
+	 * 
+	 * @param MissionControl $missionControl
+	 * @return void
+	 */
 	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
-	
+		
+	/**
+	 * Check all systems are stable and ready to go
+	 * 
+	 * @return void
+	 */
 	public function checkAllSystems() {
 		echo "Systems have already been cleared.<br>";
 	}
-	
+		
+	/**
+	 * set state in mission control
+	 * 
+	 * @return void
+	 */
 	public function startPowerUnits() {
 		echo "power units started.<br>";
 		$this->missionControl->setState($this->missionControl->getRetractArms());
