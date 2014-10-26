@@ -111,13 +111,30 @@ class MainEngine implements State {
 		echo "power units started.<br>";
 		$this->missionControl->setState($this->missionControl->getRetractArms());
 	}
-	
+			
+	/**
+	 * Print not ready statement
+	 * 
+	 * @return void
+	 */
 	public function retractArms() {
 		echo "Power units have not been started.<br>";
 	}
+			
+	/**
+	 * Print permission not granted statement
+	 * 
+	 * @return void
+	 */
 	public function shutDown() {
 		echo "Permission has not been given.<br>";
 	}
+			
+	/**
+	 * Print negative statement
+	 * 
+	 * @return void
+	 */
 	public function rocketBooster() {
 		echo "power units have not been started.<br>";
 	}
@@ -125,7 +142,12 @@ class MainEngine implements State {
 
 
 class FireRockets implements State {
-	
+			
+	/**
+	 * Mission control instance
+	 * 
+	 * @var MissionControl $missionControl
+	 */
 	public $missionControl;
 	
 	public function __construct(MissionControl $missionControl){
