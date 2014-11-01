@@ -12,11 +12,21 @@ class FireRockets implements State {
 	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
-
+	
+	/**
+	 * Check all systems are stable and ready to go
+	 *
+	 * @return void
+	 */
 	public function checkAllSystems() {
 		echo "Systems have already been cleared.<br>";
 	}
-
+	
+	/**
+	 * print statement for power units
+	 *
+	 * @return void
+	 */
 	public function startPowerUnits() {
 		echo "Systems have already been cleared.<br>";
 	}
