@@ -1,6 +1,12 @@
 <?php namespace php\statePattern;
 
 class FireRockets implements State {
+	
+	/**
+	 * Mission control instance
+	 *
+	 * @var MissionControl $missionControl
+	 */
 	public $missionControl;
 	
 	public function __construct(MissionControl $missionControl) {
