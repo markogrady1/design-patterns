@@ -37,16 +37,31 @@ class MainEngine implements State {
 		echo "power units started.<br>";
 		$this->missionControl->setState($this->missionControl->getRetractArms());
 	}
-	
+		
+	/**
+	 * Print not ready statement
+	 *
+	 * @return void
+	 */
 	public function retractArms() {
 		echo "Power units have not been started.<br>";
 	}
-	
+		
+	/**
+	 * Print permission not granted statement
+	 *
+	 * @return void
+	 */
 	public function shutDown() {
 		echo "All systems are to cease operations immediatly.<br>";
 		$this->missionControl->liftOffHandOver($this->missionControl->getAbortProcedure());
 	}
-	
+		
+	/**
+	 * Print negative statement
+	 *
+	 * @return void
+	 */
 	public function rocketBooster() {
 		echo "power units have not been started.<br>";
 	}
