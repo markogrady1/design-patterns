@@ -188,13 +188,22 @@ class FireRockets implements State {
 
 
 class LiftOff implements State {
-	
+	/**
+	 * Mission control instance
+	 * 
+	 * @var MissionControl $missionControl
+	 */
 	public $missionControl;
 	
 	public function __construct(MissionControl $missionControl) {
 		$this->missionControl = $missionControl;
 	}
-
+		
+	/**
+	 * Check all systems are stable and ready to go
+	 * 
+	 * @return void
+	 */
 	public function checkAllSystems() {
 		echo "Systems have already been cleared.<br>";
 	}
