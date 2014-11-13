@@ -1,5 +1,4 @@
 <?php 
-
 /*
 |===========================================================
 |
@@ -175,13 +174,9 @@ class MagazineUser implements User {
 	
 }
 
-/*
-|
-|----------------------------------
-|	implementation
-|----------------------------------
-|
-*/
+/**
+ * Implimentation
+ */
 $adminDesk = new AdminDesk();
 
 $magUser = new MagazineUser();
@@ -199,4 +194,3 @@ $adminDesk->setConferenceDetails('New York', 20000, 'New Jersey Hall');
 $adminDesk->displayDetails();
 
 $adminDesk->removeUser($magUser);
-
