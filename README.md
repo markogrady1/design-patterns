@@ -24,3 +24,4 @@ PHP
 - [**Strategy**](https://github.com/markogrady1/design-patterns/tree/master/php/strategyPattern)
 
 More patterns will be added soon.
+........
