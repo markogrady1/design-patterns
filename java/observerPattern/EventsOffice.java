@@ -17,15 +17,14 @@ public class EventsOffice implements Administrator {
 	public EventsOffice(){
 		observer = new ArrayList<>();
 	}
+	
 	public void registerUser(User user) {
 		observer.add(user);
-
 	}
 
 	@Override
 	public void removeUser(User user) {
 		observer.remove(user);
-
 	}
 
 	@Override
@@ -46,8 +45,8 @@ public class EventsOffice implements Administrator {
 		sendConferenceDetails();
 		displayConferenceDetails();
 	}
+	
 	public void displayConferenceDetails(){
 		System.out.println("Location: "+this.city+"\nPrice: "+price+"\nVenue: "+venue);
 	}
-
 }
