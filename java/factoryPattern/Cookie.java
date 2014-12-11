@@ -14,7 +14,6 @@ public class Cookie {
 	protected String name;
 	protected String topping;
 	public Cookie() {
-
 	}
 
 	public void mix() {
