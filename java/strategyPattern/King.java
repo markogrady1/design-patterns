@@ -2,10 +2,10 @@ package strategyPattern;
 
 public class King extends Character{
 public King(){
-	System.out.println("I am King!!!");
+	System.out.print("I am King!!!\n");
 }
 
 	public void shout() {
-		System.out.println("I am King!!!!!!");
+		System.out.print("I am King!!!!!!\n");
 	}
 }
