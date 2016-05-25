@@ -246,7 +246,7 @@ class MissionAbort implements State {
 	}
 	
 	public function retractArms() {
-		echo "Fuel drainage in at safe level.<br>";
+		echo "Fuel drainage at safe level.<br>";
 		
 	}
 	
@@ -283,11 +283,11 @@ class MissionControl {
 		$this->fireRockets = new FireRockets($this);
 		$this->missionAbort = new MissionAbort($this);
 		$this->liftOff = new LiftOff($this);
-		if($tMinus>=60) {
+		if($tMinus >= 60) {
 			echo 'Systems prepare for checks<br>';
 			$this->state = new SystemsGo($this);
 		}
-		if($tMinus<60) {
+		if($tMinus < 60) {
 			echo 'Incorrect procedure. Mission abort.<br>';
 			$this->state = new MissionAbort($this);
 			$this->state->shutDown();
